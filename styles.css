@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+body {
+    background-color: hsl(180, 52%, 96%);
+}
+
+header {
+    background-color: hsl(180, 29%, 50%);
+    position: relative;
+    height: 156px;
+    display: flex;
+}
+
+header>img {
+    width: 100%;
+}
+
+header>svg {
+    width: 100%;
+    display: flex;
+}
+
+header .header-search {
+    position: absolute;
+    width: 80%;
+    height: 60px;
+    background-color: white;
+    bottom: -30px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 5px 100px rgba(0, 0, 0, 0.2);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+header .header-search button {
+    background-color: transparent;
+    color: hsl(180, 8%, 52%);
+    border: none;
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .header-search button:hover {
+    text-decoration: underline;
+    color: hsl(180, 29%, 50%);
+}
+
+header .header-search .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+header .header-search .search .search-filter {
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+header .header-search .search .search-filter p {
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+header .header-search .search .search-filter button {
+    background-color: hsl(180, 29%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 21px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 21px;
+    transition: 0.3s;
+}
+
+header .header-search .search .search-filter button:hover {
+    background-color: hsl(180, 14%, 20%);
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 50px auto 80px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container .item {
+    background-color: white;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 30px 40px 30px 120px;
+    border-radius: 5px;
+    box-shadow:
+        0 5px 5px hsl(180, 31%, 95%),
+        0 7px 10px hsl(180, 31%, 95%), 0 10px 20px hsl(180, 31%, 95%);
+    overflow: hidden;
+    gap: 20px
+}
+
+.container .item .left-hover {
+    height: 100%;
+    width: 4px;
+    background-color: hsl(180, 29%, 50%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.container .item:hover .left-hover {
+    display: block;
+}
+
+.container .item img {
+    position: absolute;
+    width: 70px;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container .item .main-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px
+}
+
+.container .item .main-data .data {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container .item .main-data .data .company-name {
+    color: hsl(180, 29%, 50%);
+    font-weight: 500;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.container .item .main-data .data .feature-edge {
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    vertical-align: middle;
+    text-align: center;
+    height: 20px;
+}
+
+.container .item .main-data .data .feature-edge.new {
+    background-color: hsl(180, 29%, 50%);
+}
+
+.container .item .main-data .data .feature-edge.featured {
+    background-color: hsl(180, 14%, 20%);
+}
+
+.container .item .main-data .position {
+    font-weight: 700;
+    font-size: 17px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.container .item .main-data .position:hover {
+    color: hsl(180, 29%, 50%);
+}
+
+.container .item .main-data .detils {
+    color: hsl(180, 8%, 52%);
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.container .item ul {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.container .item ul li {
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    padding: 5px;
+    list-style: none;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.container .item ul li:hover {
+    color: hsl(180, 31%, 95%);
+    background-color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    header .header-search {
+        height: auto;
+        padding: 15px;
+        bottom: -50px;
+    }
+
+    header .header-search>button {
+        margin-left: 20px;
+    }
+
+    header .header-search .search {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .container {
+        margin-top: 100px;
+        gap: 35px;
+    }
+
+    .container .item {
+        flex-direction: column;
+        overflow: visible;
+        padding: 30px 20px 20px;
+    }
+
+    .container .item img {
+        width: 40px;
+        top: -20px;
+        left: 20px;
+        transform: none;
+    }
+
+    .container .item .left-hover {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    .container .item .main-data {
+        gap: 20px;
+    }
+
+    .container .item .main-data .detils {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding-bottom: 20px;
+    }
+}
